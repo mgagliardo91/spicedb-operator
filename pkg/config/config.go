@@ -130,7 +130,7 @@ type SpiceConfig struct {
 	TelemetryTLSCASecretName     string
 	SecretName                   string
 	ExtraPodLabels               map[string]string
-	ExtraPodAnnotations					 map[string]string
+	ExtraPodAnnotations          map[string]string
 	Passthrough                  map[string]string
 }
 

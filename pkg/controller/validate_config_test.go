@@ -77,7 +77,7 @@ func TestValidateConfigHandler(t *testing.T) {
 			expectNext:        nextKey,
 		},
 		{
-			name: "valid config with label warnings",
+			name:          "valid config with label warnings",
 			currentStatus: &v1alpha1.SpiceDBCluster{Status: v1alpha1.ClusterStatus{Image: "image"}},
 			rawConfig: json.RawMessage(`{
 				"datastoreEngine": "cockroachdb",

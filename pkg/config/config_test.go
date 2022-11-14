@@ -811,7 +811,7 @@ func TestNewConfig(t *testing.T) {
 					EnvPrefix:      "SPICEDB",
 					SpiceDBCmd:     "spicedb",
 					ExtraPodAnnotations: map[string]string{
-						"app.kubernetes.io/name":  "test",
+						"app.kubernetes.io/name":       "test",
 						"app.kubernetes.io/managed-by": "test-owner",
 					},
 					Passthrough: map[string]string{
@@ -866,7 +866,7 @@ func TestNewConfig(t *testing.T) {
 					EnvPrefix:      "SPICEDB",
 					SpiceDBCmd:     "spicedb",
 					ExtraPodAnnotations: map[string]string{
-						"app.kubernetes.io/name":  "test",
+						"app.kubernetes.io/name":       "test",
 						"app.kubernetes.io/managed-by": "test-owner",
 					},
 					Passthrough: map[string]string{
