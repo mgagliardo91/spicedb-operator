@@ -103,7 +103,7 @@ func TestIntOrStringKey(t *testing.T) {
 	}
 }
 
-func TestmetadataSetKey(t *testing.T) {
+func TestMetadataSetKey(t *testing.T) {
 	input := map[string]any{"k": "v", "k2": "v2"}
 	invalidInput := map[string]any{"k": 1, "k2": "v2"}
 	empty := map[string]string{}
@@ -130,7 +130,7 @@ func TestmetadataSetKey(t *testing.T) {
 			if val.value != nil {
 				config = RawConfig{"test": val.value}
 			}
-			result, warns, err := k.pop(config)
+			result, warns, err := k.pop(config, "metadata")
 			if val.value != nil {
 				require.Empty(t, config)
 			}
