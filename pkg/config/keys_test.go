@@ -103,7 +103,7 @@ func TestIntOrStringKey(t *testing.T) {
 	}
 }
 
-func TestLabelSetKey(t *testing.T) {
+func TestmetadataSetKey(t *testing.T) {
 	input := map[string]any{"k": "v", "k2": "v2"}
 	invalidInput := map[string]any{"k": 1, "k2": "v2"}
 	empty := map[string]string{}
@@ -125,7 +125,7 @@ func TestLabelSetKey(t *testing.T) {
 		{"recovers and warns on invalid map value", invalidInput, empty, map[string]string{"k2": "v2"}, true, false},
 	} {
 		t.Run(val.description, func(t *testing.T) {
-			k := labelSetKey("test")
+			k := metadataSetKey("test")
 			config := emptyConfig
 			if val.value != nil {
 				config = RawConfig{"test": val.value}
