@@ -166,7 +166,7 @@ func TestValidateConfigHandler(t *testing.T) {
 				"datastoreEngine":     "cockroachdb",
 				"tlsSecretName":       "secret",
 				"extraPodLabels":      "correct=format,good=value",
-				"extraPodAnnotations": "annotation=works",
+				"extraPodAnnotations": "annotation=works"
 			}`),
 			existingSecret: &corev1.Secret{
 				Data: map[string][]byte{
